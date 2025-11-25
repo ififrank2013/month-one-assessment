@@ -119,7 +119,7 @@ terraform-assessment/
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/month-one-assessment.git
+git clone https://github.com/ififrank2013/month-one-assessment.git
 cd month-one-assessment
 ```
 
