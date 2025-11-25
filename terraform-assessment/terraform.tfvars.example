@@ -18,4 +18,4 @@ key_pair_name = "your-ec2-key-pair-name"  # Change this to your actual key pair 
 my_ip         = "IP.ADDRESS/32"                # Change this to your actual IP (e.g., "203.0.113.25/32"). 32 was used here to restrict all access to only my IP address
 
 # SSH Password (for password-based authentication)
-ssh_password = "TechCorp2024!Secure"
+ssh_password = "SecurePassword1234"   # Change to your desired password
