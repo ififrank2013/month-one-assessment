@@ -2,3 +2,6 @@
 *.tfstate
 *.tfvars
 *.pem
+*.backup
+.terraform.lock.hcl
+export_terraformtfstate.sh

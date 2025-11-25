@@ -133,8 +133,6 @@ cd month-one-assessment
 2. Edit `terraform.tfvars` with your values:
    ```bash
    nano terraform.tfvars
-   # or
-   vim terraform.tfvars
    ```
 
 3. Update the following required variables:
@@ -166,7 +164,6 @@ This command shows:
 - Any changes to existing resources
 - Resource dependencies
 
-**Take a screenshot of the plan output for submission!**
 
 ### Step 5: Deploy the Infrastructure
 
@@ -178,7 +175,6 @@ terraform apply
 - Type `yes` when prompted to confirm
 - Wait for deployment to complete (typically 5-10 minutes)
 
-**Take a screenshot of the successful apply output for submission!**
 
 ### Step 6: Save the Outputs
 
@@ -191,6 +187,20 @@ Save important outputs:
 - Bastion host public IP
 - Web server private IPs
 - Database server private IP
+
+
+#### Some useful output commands:
+terraform output
+
+# Get specific outputs
+- terraform output bastion_public_ip
+- terraform output load_balancer_dns_name
+- terraform output web_server_1_private_ip
+- terraform output web_server_2_private_ip
+- terraform output database_server_private_ip
+
+# Get access instructions
+- terraform output access_instructions
 
 ## 🔐 Accessing the Infrastructure
 
@@ -220,7 +230,7 @@ ssh -i /path/to/your-key.pem ec2-user@<BASTION_PUBLIC_IP>
 
 ```bash
 ssh admin@<BASTION_PUBLIC_IP>
-# Password: TechCorp2024!Secure (or your configured password)
+# Password: YourPassword
 ```
 
 ### Access Web Servers (via Bastion)
@@ -233,13 +243,19 @@ ssh ec2-user@<WEB_SERVER_1_PRIVATE_IP>
 
 # Or using password
 ssh admin@<WEB_SERVER_1_PRIVATE_IP>
-# Password: TechCorp2024!Secure
+# Password: YourPassword
 ```
 
 ### Access Database Server (via Bastion)
 
-First, connect to the bastion host, then:
+Firstly, retrieve database server ip by running:
 
+```bash
+terraform output database_server_private_ip
+```
+Then, connect to the bastion host:
+
+And ssh into the database server with:
 ```bash
 # SSH to database server
 ssh ec2-user@<DATABASE_SERVER_PRIVATE_IP>

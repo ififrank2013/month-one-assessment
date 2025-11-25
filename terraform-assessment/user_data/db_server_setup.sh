@@ -123,3 +123,4 @@ echo "Database server setup completed successfully at $(date)" >> /var/log/user-
 
 # Display status
 systemctl status postgresql --no-pager >> /var/log/user-data.log
+
