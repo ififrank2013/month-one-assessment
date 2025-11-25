@@ -1,0 +1,21 @@
+# AWS Region Configuration
+aws_region = "us-east-1"
+
+# VPC and Subnet Configuration
+vpc_cidr              = "10.0.0.0/16"
+public_subnet_1_cidr  = "10.0.1.0/24"
+public_subnet_2_cidr  = "10.0.2.0/24"
+private_subnet_1_cidr = "10.0.3.0/24"
+private_subnet_2_cidr = "10.0.4.0/24"
+
+# Instance Type Configuration
+bastion_instance_type = "t3.micro"
+web_instance_type     = "t3.micro"
+db_instance_type      = "t3.small"
+
+# SSH Configuration
+key_pair_name = "your-ec2-key-pair-name"  # Change this to your actual key pair name
+my_ip         = "IP.ADDRESS/32"                # Change this to your actual IP (e.g., "203.0.113.25/32"). 32 was used here to restrict all access to only my IP address
+
+# SSH Password (for password-based authentication)
+ssh_password = "TechCorp2024!Secure"
