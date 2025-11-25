@@ -1,4 +1,4 @@
-# TechCorp AWS Infrastructure Deployment
+# Deploying AWS Infrastructure with Terraform
 
 This repository contains Terraform configuration files to deploy a highly available web application infrastructure on AWS for TechCorp.
 
