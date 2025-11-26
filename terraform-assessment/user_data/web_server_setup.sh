@@ -97,7 +97,7 @@ cat > /var/www/html/index.html <<EOF
 </head>
 <body>
     <div class="container">
-        <h1>🚀 TechCorp</h1>
+        <h1>TechCorp</h1>
         <p class="subtitle">Web Application Infrastructure</p>
         
         <div class="info-box">

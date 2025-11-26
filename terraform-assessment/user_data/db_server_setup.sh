@@ -1,5 +1,4 @@
 #!/bin/bash
-# Database Server Setup Script for TechCorp
 # This script installs and configures PostgreSQL on Amazon Linux 2
 
 # Update system packages
