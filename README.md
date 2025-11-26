@@ -130,7 +130,7 @@ cd month-one-assessment
    cp terraform.tfvars.example terraform.tfvars
    ```
 
-2. Edit `terraform.tfvars` with your values:
+2. Edit `terraform.tfvars` and fill in your values:
    ```bash
    nano terraform.tfvars
    ```
@@ -202,7 +202,7 @@ terraform output
 # Get access instructions
 - terraform output access_instructions
 
-## 🔐 Accessing the Infrastructure
+## Accessing the Infrastructure
 
 ### Access the Web Application
 
@@ -285,16 +285,12 @@ for i in {1..10}; do
 done
 ```
 
-**Take a screenshot of the web page in your browser showing the instance ID!**
-
 ### 2. Test Bastion Access
 
 ```bash
 # SSH to bastion
 ssh -i your-key.pem ec2-user@$(terraform output -raw bastion_public_ip)
 ```
-
-**Take a screenshot showing successful SSH connection to bastion!**
 
 ### 3. Test Web Server Access via Bastion
 
@@ -310,8 +306,6 @@ ssh admin@$WEB_1_IP
 ssh admin@$WEB_2_IP
 ```
 
-**Take screenshots showing SSH access to both web servers!**
-
 ### 4. Test Database Server Access and PostgreSQL
 
 From the bastion host:
@@ -325,11 +319,6 @@ ssh admin@$DB_IP
 sudo -u postgres psql -d techcorp_db -c "SELECT * FROM app_info;"
 ```
 
-**Take screenshots showing:**
-- SSH access to database server
-- Successful PostgreSQL connection
-- Query results from the database
-
 ### 5. Verify AWS Console
 
 Login to AWS Console and verify:
@@ -337,8 +326,6 @@ Login to AWS Console and verify:
 - EC2 instances are running
 - Load Balancer is active and healthy
 - Security groups are configured correctly
-
-**Take screenshots of AWS Console showing the created resources!**
 
 ## Cleanup Instructions
 
@@ -494,24 +481,6 @@ Approximate monthly costs (us-east-1 region):
 
 **Note**: Costs vary by region and actual usage. Always check AWS Pricing Calculator for accurate estimates.
 
-## Submission Checklist
-
-Ensure you have:
-
-- [ ] All Terraform configuration files
-- [ ] User data scripts
-- [ ] README.md with deployment instructions
-- [ ] Screenshot: Terraform plan output
-- [ ] Screenshot: Terraform apply completion
-- [ ] Screenshot: AWS Console showing VPC and subnets
-- [ ] Screenshot: AWS Console showing EC2 instances
-- [ ] Screenshot: AWS Console showing Load Balancer
-- [ ] Screenshot: Web application accessible via ALB (showing instance ID)
-- [ ] Screenshot: SSH access to bastion host
-- [ ] Screenshot: SSH access to web server via bastion
-- [ ] Screenshot: SSH access to database server via bastion
-- [ ] Screenshot: PostgreSQL connection and query results
-- [ ] terraform.tfstate file (ensure no sensitive data)
 
 ## Additional Resources
 
